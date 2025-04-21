@@ -68,10 +68,10 @@ The other functions (`notWindowAllowed`and `firstConnection()`) will be explaine
 
 ```c
 int main() {
-    FreeConsole();
-    notWindowAllowed();
-    firstConnection();
-    return 0;
+    FreeConsole();
+    notWindowAllowed();
+    firstConnection();
+    return 0;
 }
 ```
 
@@ -220,8 +220,7 @@ snprintf(cmdLine, sizeof(cmdLine), "%s%s%s%s%s%s%s", part3, part4, part1, part2,
 Now we create the process with `CreateProcessA()` with the command we just build. We also use `CREATE_NO_WINDOW` to ensure nothing is shown to the user.
 
 ```c
-BOOL success = CreateProcessA(NULL, cmdLine, NULL, NULL, TRUE,
-                                  CREATE_NO_WINDOW, NULL, NULL, &si, &pi);
+BOOL success = CreateProcessA(NULL, cmdLine, NULL, NULL, TRUE,CREATE_NO_WINDOW, NULL, NULL, &si, &pi);
 ```
 
 If the process creation is successful, we close the write handle (`hWrite`) since we only need to read from the pipe. Then, we enter a loop where we continuously read the output from the pipe and send it over the socket. Once all the data is transferred, we close the necessary handles.
@@ -268,7 +267,7 @@ HASH: `bc22040897c42dd042a3bd50ed62f77d7c45d3c6018a93077eac1cd48d2c7f9c`
 
 This executable is flagged as a trojan, with the family label Cobalt Strike. At first, I was a bit worried because I thought it wouldn't be able to run on any machine with Windows Defender enabled without getting caught. But after testing, I found that it runs just fine (even with the antivirus turned on).
 
-	IMPORTANT NOTE: Occasionally, I do get a detection from SmartScreen, a feature in Windows Defender that helps block potentially malicious programs. I haven't figured out a consistent pattern for when it triggers and when it doesn't.
+IMPORTANT NOTE: Occasionally, I do get a detection from SmartScreen, a feature in Windows Defender that helps block potentially malicious programs. I haven't figured out a consistent pattern for when it triggers and when it doesn't.
 
 Anyway, the following screenshots show how the information is displayed on the C2 server side. When the user runs the executable, nothing visible happens on their end—but the server sees this:
 
