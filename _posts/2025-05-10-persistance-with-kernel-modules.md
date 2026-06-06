@@ -1,8 +1,8 @@
 ---
- title: "Persistance with kernel modules"
+ title: "Persistence with kernel modules"
  layout: "post"
  categories: "Malware"
- tags: ["Linux", "Signals", "Modules", "Persistance"]
+ tags: ["Linux", "Signals", "Modules", "Persistence"]
 ---
 
 
