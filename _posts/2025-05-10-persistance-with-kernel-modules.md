@@ -51,7 +51,7 @@ static void send_message_printk_kernel(void){
 }
 ```
 
-![[Pasted image 20250510143149.png]]
+![Cyberchef decode payload](../assets/posts/cyberchef.png)
 
 The next block of code is a bit more complex. First, we make the SIGUSR1 and SIGUSR2 signals available to be read. Then, we have an "infinite" loop that checks whether the stop variable has been activated, so that if it is, the program stops. With this in place, we start iterating until we find a signal in the signal queue. When the received signal is the one we're expecting (this can be done with a program, but I was doing it manually using the `kill -SIGUSRx <PID>` command to send the signals), it reads it and, depending on which signal we receive, either stops the module and thread, or simply runs the reverse shell part.
 

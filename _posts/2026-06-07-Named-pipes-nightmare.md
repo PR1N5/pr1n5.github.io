@@ -119,7 +119,6 @@ WriteText(hClientPipe, "\r\n__END__\r\n");
 
 It's not the most sophisticated protocol in the world, but it gets the job done and makes the client-side logic a lot simpler.
 
-> [!NOTE]
 > The actual DLL has quite a bit more going on behind the scenes. I've trimmed out a lot of the code because the goal of this article isn't to publish a full implementation, but to show the idea and demonstrate the potential of Named Pipes when combined with other Windows components.
 
 ## It's Me, the Client
