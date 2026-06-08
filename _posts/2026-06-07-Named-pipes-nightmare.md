@@ -94,8 +94,8 @@ STARTUPINFOA si;
 si.cb = sizeof(si);
 si.dwFlags = STARTF_USESTDHANDLES;
 si.hStdOutput = hWrite;
-si.hStdError  = hWrite;
-si.hStdInput   = GetStdHandle(STD_INPUT_HANDLE);
+si.hStdError = hWrite;
+si.hStdInput = GetStdHandle(STD_INPUT_HANDLE);
 
 [...]
 
