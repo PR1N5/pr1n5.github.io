@@ -6,7 +6,6 @@ tags: ["Windows", "Cloud", "Evasion", "CFAPI"]
 ---
 
 
-
 A couple of weeks ago, I started messing around with some of the techniques used by the LPE `BlueHammer`, specifically the Cloud Files-related parts. While my goal isn't to recreate the exploit (mainly because it relies on several other techniques, and reimplementing it from scratch feels completely insane), I was particularly intrigued by everything surrounding the Cloud Files API. I had no idea what I was getting myself into.
 
 Although the API itself isn't particularly large, it's probably one of the least documented APIs I've ever worked with. Every time I tried to find examples, use cases, or simply understand the typical application workflow, I kept ending up in the Microsoft Learn documentation, which, in many cases, explains what a function does but barely goes into how it is actually meant to be used in a real implementation. Overall, it was quite a frustrating experience.
